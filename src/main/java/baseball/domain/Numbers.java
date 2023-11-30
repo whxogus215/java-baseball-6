@@ -27,20 +27,20 @@ public class Numbers {
         return new Numbers(computer);
     }
 
-    public int calculateBallCount(List<Integer> comparedNumbers) {
+    public int calculateBallCount(Numbers comparedNumbers) {
         int countOfBall = 0;
-        for (int i = 0; i < comparedNumbers.size(); i++) {
-            if (isBall(comparedNumbers, i)){
+        for (int i = 0; i < comparedNumbers.numbers.size(); i++) {
+            if (isBall(comparedNumbers.numbers, i)){
                 countOfBall += 1;
             }
         }
         return countOfBall;
     }
 
-    public int calculateStrikeCount(List<Integer> comparedNumbers) {
+    public int calculateStrikeCount(Numbers comparedNumbers) {
         int countOfStrike = 0;
-        for (int i = 0; i < comparedNumbers.size(); i++) {
-            if (isStrike(comparedNumbers, i)) {
+        for (int i = 0; i < comparedNumbers.numbers.size(); i++) {
+            if (isStrike(comparedNumbers.numbers, i)) {
                 countOfStrike += 1;
             }
         }
