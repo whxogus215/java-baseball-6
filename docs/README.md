@@ -68,3 +68,6 @@
     - `Parser`에게 넘겨서 `List<Integer>` 타입의 숫자를 전달받는다.
 5. Parser
     - 전달받은 문자열을 `List<Integer>` 타입으로 변환하여 반환한다.
+6. Result
+    - 스트라이크/볼 개수를 갖고 있다.
+    - 3스트라이크에 대한 `boolean` 값을 갖고있다.

@@ -13,6 +13,7 @@ public class ExceptionHandler {
                 return supplier.get();
             } catch (IllegalArgumentException exception) {
                 ResultOutputWriter.println(exception.getMessage());
+//                throw new IllegalArgumentException(exception);
             }
         }
     }

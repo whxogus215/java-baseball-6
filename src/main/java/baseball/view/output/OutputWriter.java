@@ -4,6 +4,10 @@ import baseball.config.Message;
 
 public class OutputWriter {
 
+    public static void print(Object object) {
+        System.out.printf(object.toString());
+    }
+
     public static void println(Object object) {
         System.out.println(object);
     }
