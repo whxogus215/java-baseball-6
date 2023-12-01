@@ -3,12 +3,12 @@ package baseball.dto;
 public class Result {
     private int countOfStrike;
     private int countOfBall;
-    private ResultType gameResult;
+    private ResultType resultType;
 
     public Result(int countOfStrike, int countOfBall, ResultType gameResult) {
         this.countOfStrike = countOfStrike;
         this.countOfBall = countOfBall;
-        this.gameResult = gameResult;
+        this.resultType = gameResult;
     }
 
     public int getCountOfStrike() {
@@ -19,7 +19,7 @@ public class Result {
         return countOfBall;
     }
 
-    public ResultType getGameResult() {
-        return gameResult;
+    public ResultType getResultType() {
+        return resultType;
     }
 }
