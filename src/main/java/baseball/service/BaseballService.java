@@ -14,9 +14,8 @@ public class BaseballService {
     public Result getResult(Numbers playerNumbers, Numbers computerNumbers) {
         int countOfStrike = playerNumbers.calculateStrikeCount(computerNumbers);
         int countOfBall = playerNumbers.calculateBallCount(computerNumbers);
-        if (countOfStrike == 3) {
-            return new Result(countOfStrike, countOfBall, ResultType.ALL_STRIKE);
-        }
-        return new Result(countOfStrike, countOfBall, ResultType.NOT_END);
+
+        ResultType findResultType = ResultType.findResultTypeByCount(countOfBall, countOfStrike);
+        return new Result(countOfStrike, countOfBall, findResultType);
     }
 }
