@@ -1,6 +1,6 @@
 package baseball.exception;
 
-import baseball.view.OutputView;
+import baseball.view.output.ResultOutputWriter;
 import java.util.function.Supplier;
 
 public class ExceptionHandler {
@@ -12,7 +12,7 @@ public class ExceptionHandler {
             try {
                 return supplier.get();
             } catch (IllegalArgumentException exception) {
-                OutputView.println(exception.getMessage());
+                ResultOutputWriter.println(exception.getMessage());
             }
         }
     }
