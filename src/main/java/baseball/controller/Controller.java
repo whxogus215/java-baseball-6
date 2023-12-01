@@ -9,7 +9,9 @@ import baseball.exception.ExceptionHandler;
 import baseball.service.BaseballService;
 import baseball.utils.Parser;
 import baseball.view.input.InputReader;
+import baseball.view.output.OutputWriter;
 import baseball.view.output.ResultOutputWriter;
+import camp.nextstep.edu.missionutils.Console;
 import java.util.List;
 
 public class Controller {
@@ -22,11 +24,10 @@ public class Controller {
     }
 
     public void gameStart() {
-        System.out.println(START);
+        OutputWriter.println(START);
         gameSet();
-
         while (true) {
-            System.out.println(RESTART);
+            OutputWriter.println(RESTART);
             String input = InputReader.readInput();
             if (input.equals("1")) {
                 gameSet();
@@ -35,6 +36,7 @@ public class Controller {
                 break;
             }
         }
+        Console.close();
     }
 
     public void gameSet() {
